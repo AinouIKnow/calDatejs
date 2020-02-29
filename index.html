@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>日付計算</title>
+
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/default.date.css">
+
+  <script src="Scripts/jquery-3.4.1.min.js"></script>
+  <script src="Scripts/picker.js"></script>
+  <script src="Scripts/picker.date.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/lang-ja.js"></script> <!-- 日本語化 -->
+
+</head>
+
+<body>
+  <section class="section">
+    <div class="section__block section__block--scoped">
+      <h3>日付計算</h3>
+      <fieldset class="fieldset fieldset--demo">
+        <div class="fieldset__wrapper">
+          <label>日付</label></br>
+          <input id='inputDate' class="fieldset__input js__datepicker" type="text" placeholder="Try me&hellip;"></br></br>
+          <label>求めたい未来(過去)</label></br>
+          <input type="number" id="inputMonth" min="0"/>
+          <form name="form1">
+            <input name="manth" id="next" type="radio" checked> ヶ月後
+            <input name="manth" id="pre" type="radio"> ヶ月前
+          </form>
+          <button id="submit" class="fieldset__button button button--small" onclick="onClickSubmit();">算出する</button>
+        </div>
+        <div id="result"></div> <!-- ボタン押下の結果を表示する -->
+      </fieldset>
+
+    </div>
+  </section>
+</body>
+
+</html>
